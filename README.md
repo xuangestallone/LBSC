@@ -32,7 +32,7 @@ webcachesim_cli xxx LBSC 4294967296 --is_cost_size_sample=1 --cost_size_threshol
 webcachesim_cli xxx LBSC 4294967296 --is_cost_size_sample=1 --cost_size_threshol=xx --is_dynamic_cost_size_threshold=1  #dynamic splitting method
 ```
 
-- Using optimization of outlier detection.
+- Using optimization of outlier detection. Note that 'xxx' indicates the path of datasets
 ```
 webcachesim_cli xxx LBSC 4294967296 --is_optimize_train=1
 ```
