@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+cd simulator
 # assume current path is under webcachesim
 sudo apt-get update
 sudo apt install -y git cmake build-essential libboost-all-dev python3-pip parallel libprocps-dev software-properties-common
