@@ -1,29 +1,16 @@
-# FEAST
+# LBSC
 
 ## Introduction
-FEAST is a federated feature selection framework under VFL setting, who considers conditional mutual information (CMI) based feature selection, and utilizes CMI to identify features that are highly correlated with the label while having low redundancy between each other. The workflow of FEAST mainly consists of four stages: namely data pre-processing, statistical variable generation, feature score calculation, and feature ranking and selection.
+LBSC a cost-aware approach for caching that uses machine learning with low computation overheads. To accomplish this work, we propose an oracle algorithm for LBSC to mimic, which is optimal under some assumptions with provable theoretical guarantees. To make the ML model more lightweight, we put forward some optimizations, such as efficiently sampling cached data for model inference, discarding outlier after training data generation, and efficiently re-training.
 
-The files in the project are described as follows:
-- dataset: The four datasets introduced in the paper.
-- discretization: Implementation of data discretization (binning) methods.
-- filter: Implementation of statistical variable generation and feature score calculation.
-- multi-party-real: Implementation of FEAST in real multi-party scenarios.
-- multi-party-simulation: Implementation of FEAST in simulated multi-party scenarios.
-- single-party: Implementation of CFEAST.
-- classification.py: Implementation of different classifier.
-- featureSelectionInMultiParties.py: The workflow of FEAST.
-- featureSelectionInSingleParty.py: The workflow of CFEAST.
-- preprocessing.py: Implementation of data pre-processing.
+Our evaluation is two-fold. 
+- In the first part, we evaluate the performance of LBSC on synthetic datasets based on real-world workloads, this part is implemented based on the cache framework webcachesim~(https://github.com/sunnyszy/lrb). The main code is in folder simulator.
+- In the second part, we demonstrate that it is workable in real cloud analytical databases~(i.e., FPDB). This part is implemented based on the cloud databases prototype FlexPushdownDB~(https://github.com/cloud-olap/FlexPushdownDB). The main code is in folder FPDB.
+
 
 ## Environments
 ```
-python 3.6.6
-numpy 1.19.2
-pandas 0.22.0
-scikit-learn 0.24.2
-xgboost 1.3.3
-grpcio 1.14.1
-protobuf 3.17.2
+See simulator/README.md  and FPDB/README.md.
 ```
 
 ## Quick Start
