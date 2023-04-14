@@ -15,21 +15,46 @@ See simulator/README.md  and FPDB/README.md.
 
 ## Dataset
 ```
-The two CDN datasets are download by http://lrb.cs.princeton.edu/wiki2019.tr.tar.gz  and  http://lrb.cs.princeton.edu/wiki2018.tr.tar.gz.
+The two CDN datasets are shown in simulator/README.md.
+The datasets used in FPDB is the same as the original paper, which can be found in FPDB/README.md.
 ```
 
 ## Quick Start
 ### LBSC in synthetic dataset: 
-- Generating cost for the 
+- Generating cost for the real-world dataset. caching algorithm(LRU) and cache size(4294967296) are arbitrary. The last three parameters are used to adjust whether transfer cost dominates or computation cost dominates.
 ```
-python multi-party-real/feature_selection_passive_selectall.py
-python multi-party-real/feature_selection_active_selectall.py
+webcachesim_cli xxx LRU 4294967296 --delta_ratio=250 --fixed_byte=10240 --min_ratio=20 
+```
+
+- Using optimization of efficient sampling.
+```
+webcachesim_cli xxx LBSC 4294967296 --is_cost_size_sample=1 --cost_size_threshol=0.5   #static splitting method
+webcachesim_cli xxx LBSC 4294967296 --is_cost_size_sample=1 --cost_size_threshol=0.5 --is_dynamic_cost_size_threshold=1  #dynamic splitting method
+```
+
+- Using optimization of outlier detection.
+```
+webcachesim_cli xxx LBSC 4294967296 --is_optimize_train=1
+```
+
+- Using optimization of efficient re-training.
+```
+webcachesim_cli xxx LBSC 4294967296 --kl_threshold=3.52 --is_use_kl=1 --kl_sample_num=1000
 ```
 
 ### LBSC in FPDB: 
-In this scenario, The users can simulate the multi-party feature selection process by modifying the profile.
-Taking mimic dataset as an example, the users can run FEAST with the following command:
+We integrate LBSC with FPDB to evaluate the performance in cloud databases. The basic run command is same as FPDB/README.md. We take an example as following.
+ssb-sf10-sortlineorder/csv/ is the metadata folder of the original data.
+
 ```
-python multi-party-simulation/mimic/mimic_FEAST.py
+./normal-ssb-experiment -d ssb-sf10-sortlineorder/csv/ <cache_size> <mode> <caching_policy> 150 0 3 0 0 1 2
 ```
+
+caching_policy: cache replacement policy used in the segment cache. add two new algorithms:
+```
+5 - BeladySizeCost
+6 - LBSC
+```
+
+
 
