@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/LightGBM" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/emukit" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/fast-cpp-csv-parser" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/libbf" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/mongo-c-driver" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/mongo-cxx-driver" vcs="ignore" />
+    <mapping directory="$PROJECT_DIR$/lib/sparsepp" vcs="ignore" />
+  </component>
+</project>

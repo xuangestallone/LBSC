@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <libraryRoots>
+      <file path="$PROJECT_DIR$/lib" />
+    </libraryRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/build" />
+      <file path="$PROJECT_DIR$/cmake-build-debug" />
+      <file path="$PROJECT_DIR$/lib/LightGBM" />
+      <file path="$PROJECT_DIR$/lib/emukit" />
+      <file path="$PROJECT_DIR$/lib/libbf" />
+      <file path="$PROJECT_DIR$/lib/mongo-c-driver" />
+      <file path="$PROJECT_DIR$/lib/mongo-cxx-driver" />
+      <file path="$PROJECT_DIR$/pywebcachesim.egg-info" />
+    </excludeRoots>
+  </component>
+</project>

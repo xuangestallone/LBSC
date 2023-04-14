@@ -1,0 +1,18 @@
+[submodule "simulator/lib/LightGBM"]
+	path = simulator/lib/LightGBM
+	url = https://github.com/sunnyszy/LightGBM/tree/41e950a93b4b617cfa0760a490097582475fbef7
+[submodule "simulator/lib/fast-cpp-csv-parser"]
+	path = simulator/lib/fast-cpp-csv-parser
+	url = https://github.com/sunnyszy/fast-cpp-csv-parser/tree/327671c577aaa6b1e5d384153634cb96d98e87f6
+[submodule "simulator/lib/libbf"]
+	path = simulator/lib/libbf
+	url = https://github.com/sunnyszy/libbf/tree/1425fad095770886bbc017c4ab4fe2fb4a20b869
+[submodule "simulator/lib/mongo-c-driver"]
+	path = simulator/lib/mongo-c-driver
+	url = https://github.com/sunnyszy/mongo-c-driver/tree/8ab2eed8d00bdcb92b3a70a3555f4ab63c07c24e
+[submodule "simulator/lib/mongo-cxx-driver"]
+	path = simulator/lib/mongo-cxx-driver
+	url = https://github.com/sunnyszy/mongo-cxx-driver/tree/deb3e38dcccb8ec4074ace9ebfd093237a033d52
+[submodule "simulator/lib/sparsepp"]
+	path = simulator/lib/sparsepp
+	url = https://github.com/sunnyszy/sparsepp/tree/5dc50f795b9783ce5778c03b6cad5d1c7d0d29ea
