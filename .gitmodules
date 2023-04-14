@@ -1,6 +1,18 @@
-[submodule "simulator/lib/libbf"]
-	path = simulator/lib/libbf
-	url = https://github.com/mavam/libbf.git
 [submodule "simulator/lib/LightGBM"]
 	path = simulator/lib/LightGBM
 	url = https://github.com/sunnyszy/LightGBM.git
+[submodule "simulator/lib/fast-cpp-csv-parser"]
+	path = simulator/lib/fast-cpp-csv-parser
+	url = https://github.com/sunnyszy/fast-cpp-csv-parser.git
+[submodule "simulator/lib/libbf"]
+	path = simulator/lib/libbf
+	url = https://github.com/sunnyszy/libbf.git
+[submodule "simulator/lib/mongo-c-driver"]
+	path = simulator/lib/mongo-c-driver
+	url = https://github.com/sunnyszy/mongo-c-driver.git
+[submodule "simulator/lib/mongo-cxx-driver"]
+	path = simulator/lib/mongo-cxx-driver
+	url = https://github.com/sunnyszy/mongo-cxx-driver.git
+[submodule "simulator/lib/sparsepp"]
+	path = simulator/lib/sparsepp
+	url = https://github.com/sunnyszy/sparsepp.git
