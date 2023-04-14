@@ -8,28 +8,28 @@ Our evaluation is two-fold.
 - In the second part, we demonstrate that it is workable in real cloud analytical databases~(i.e., FPDB). This part is implemented based on the cloud databases prototype FlexPushdownDB~(https://github.com/cloud-olap/FlexPushdownDB). The main code is in folder FPDB.
 
 
-## Environments
+## Dependencies and Build
 ```
 See simulator/README.md  and FPDB/README.md.
 ```
 
+## Dataset
+```
+The two CDN datasets are download by http://lrb.cs.princeton.edu/wiki2019.tr.tar.gz  and  http://lrb.cs.princeton.edu/wiki2018.tr.tar.gz.
+```
+
 ## Quick Start
-### FEAST in real multi-party scenarios: 
-The users needs to prepare multiple machines (one is active party and the others are passive parties). Then, placing the file whose filename with 'active' on the active party, and the file whose filename with 'passive' on the passive party. The rest of the files are required by all parties. Next, The users can run FEAST with the following commands:
+### LBSC in synthetic dataset: 
+- Generating cost for the 
 ```
 python multi-party-real/feature_selection_passive_selectall.py
 python multi-party-real/feature_selection_active_selectall.py
 ```
 
-### FEAST in simulated multi-party scenarios: 
+### LBSC in FPDB: 
 In this scenario, The users can simulate the multi-party feature selection process by modifying the profile.
 Taking mimic dataset as an example, the users can run FEAST with the following command:
 ```
 python multi-party-simulation/mimic/mimic_FEAST.py
 ```
 
-### CFEAST:
-Taking mimic dataset as an example, the users can run CFEAST with the following command:
-```
-python single-party/mimic/mimic_FEAST.py
-```
