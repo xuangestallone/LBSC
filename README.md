@@ -4,8 +4,8 @@
 LBSC a cost-aware approach for caching that uses machine learning with low computation overheads. To accomplish this work, we propose an oracle algorithm for LBSC to mimic, which is optimal under some assumptions with provable theoretical guarantees. To make the ML model more lightweight, we put forward some optimizations, such as efficiently sampling cached data for model inference, discarding outlier after training data generation, and efficiently re-training.
 
 Our evaluation is two-fold. 
-- In the first part, we evaluate the performance of LBSC on synthetic datasets based on real-world workloads, this part is implemented based on the cache framework webcachesim~(https://github.com/sunnyszy/lrb). The main code is in folder simulator.
-- In the second part, we demonstrate that it is workable in real cloud analytical databases(i.e., FPDB). This part is implemented based on the cloud databases prototype FlexPushdownDB~(https://github.com/cloud-olap/FlexPushdownDB). The main code is in folder FPDB.
+- In the first part, we evaluate the performance of LBSC on synthetic datasets based on real-world workloads, this part is implemented based on the cache framework webcachesim(https://github.com/sunnyszy/lrb). The main code is in folder simulator.
+- In the second part, we demonstrate that it is workable in real cloud analytical databases(i.e., FPDB). This part is implemented based on the cloud databases prototype FlexPushdownDB(https://github.com/cloud-olap/FlexPushdownDB). The main code is in folder FPDB.
 
 
 ## Dependencies and Build
